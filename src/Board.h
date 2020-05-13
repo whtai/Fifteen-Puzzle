@@ -16,23 +16,23 @@ enum EMove {UP, DOWN, LEFT, RIGHT};
 class Board: public LTexture
 {
 public:
-	Board();
+    Board();
 
-	void randomizeBoard();
-	void renderBoard();
-	
-	void move(const EMove);
+    void randomizeBoard();
+    void renderBoard();
 
-	bool isSolved();
+    void move(const EMove);
+
+    bool isSolved();
 private:
-	int spaceRow;
-	int spaceCol;
+    int spaceRow;
+    int spaceCol;
 
-	int currentBoard[4][4];
-	
-	static const int solvedBoard[4][4];
-	
-	SDL_Rect tiles[16];
+    int currentBoard[4][4];
+
+    static const int solvedBoard[4][4];
+
+    SDL_Rect tiles[16];
 };
 
 
